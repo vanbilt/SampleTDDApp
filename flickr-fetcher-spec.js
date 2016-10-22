@@ -1,9 +1,10 @@
 // flicker-fetcher-spec.js
 'use strict';
 var expect = require('chai').expect,
-  util = require('util');
+  util = require('util'),
+  FlickrFetcher = require('./flickr-fetcher');
 
-var apiKey = 'does not matter much what this is right now',
+const apiKey = 'does not matter much what this is right now',
   apiUrl = 'https://api.flickr.com/services/rest/' +
     '?method=flickr.photos.search&api_key=%s' +
     '&text=pugs&format=json&nojsoncallback=1',
@@ -66,7 +67,6 @@ var apiKey = 'does not matter much what this is right now',
 
 describe('FlickrFetcher', function() {
     it('should exist', function() {
-        var FlickrFetcher = require('./flickr-fetcher.js');
         expect(FlickrFetcher).to.not.be.undefined;
     });
 });

@@ -1,0 +1,27 @@
+{
+  "name": "sampletddapp",
+  "version": "1.0.0",
+  "description": "Learn TDD by doing",
+  "main": "flickr-fetcher-spec.js",
+  "dependencies": {
+    "chai": "^3.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanbilt/SampleTDDApp"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "mocha": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learn",
+    "tdd"
+  ],
+  "author": "Aaron Vandrey",
+  "license": "None"
+}

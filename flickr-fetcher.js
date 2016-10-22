@@ -14,6 +14,22 @@ FlickrFetcher = {
           // could also use `this` instead of FlickrFetcher
           url: FlickrFetcher.photoObjToURL(photoObj)
         };
+  },
+  fetchFlickrData: function (apiKey, fetch) {
+    var url = 'https://api.flickr.com/services/rest/' +
+      '?method=flickr.photos.search' +
+      '&api_key=' + apiKey +
+      '&text=pugs' +
+      '&format=json' +
+      '&nojsoncallback=1';
+
+    return fetch(url)
+  },
+  fetchPhotos: function (apiKey, fetch) {
+    return FlickrFetcher.fetchFlickrData(apiKey, fetch)
+      .then(function (data) {
+        return data.photos.photo.map(FlickrFetcher.transformPhotoObj);
+      })
   }
 };
 
